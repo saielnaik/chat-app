@@ -1,0 +1,14 @@
+const { register, login, avatar, allusers } = require("../controllers/userController");
+
+const router = require("express").Router();
+
+router.post("/register", register);
+
+router.post("/login", login);
+
+router.post("/avatar/:id", avatar);
+
+router.get("/allusers/:id", allusers);
+
+
+module.exports = router;
